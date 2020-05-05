@@ -1,7 +1,8 @@
-package com.solbegsoft.gritx
+package com.solbegsoft.gritx.view.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.solbegsoft.gritx.R
 
 class MainActivity : AppCompatActivity() {
 
