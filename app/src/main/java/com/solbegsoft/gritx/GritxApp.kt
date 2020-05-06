@@ -5,6 +5,7 @@ import com.solbegsoft.gritx.di.domain.DomainComponent
 import com.solbegsoft.gritx.di.navigation.NavigationComponent
 import com.solbegsoft.gritx.di.remote.GritxApiServiceComponent
 import com.solbegsoft.gritx.di.signin.SignInComponent
+import com.solbegsoft.gritx.di.signin.SignUpComponent
 import com.solbegsoft.gritx.di.tools.ToolsComponent
 
 class GritxApp: Application() {
@@ -25,5 +26,6 @@ class GritxApp: Application() {
         val navigationComponent = NavigationComponent.get()
 
         SignInComponent.init(toolsComponent, navigationComponent, domainComponent)
+        SignUpComponent.init(toolsComponent, navigationComponent, domainComponent)
     }
 }

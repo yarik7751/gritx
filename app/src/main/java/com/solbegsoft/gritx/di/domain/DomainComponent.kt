@@ -1,6 +1,7 @@
 package com.solbegsoft.gritx.di.domain
 
 import com.solbegsoft.gritx.core.repositories.ISignInRepository
+import com.solbegsoft.gritx.core.repositories.ISignUpRepository
 import com.solbegsoft.gritx.di.remote.GritxApiServiceProvider
 import com.solbegsoft.gritx.tools.exceptions.InitComponentException
 import dagger.Component
@@ -30,4 +31,6 @@ interface DomainComponent: DomainProvider {
 interface DomainProvider {
 
     fun provideSignInRepository(): ISignInRepository
+
+    fun provideSignUpRepository(): ISignUpRepository
 }

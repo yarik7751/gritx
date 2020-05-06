@@ -1,6 +1,7 @@
 package com.solbegsoft.gritx.view.signin
 
 import androidx.fragment.app.Fragment
+import com.solbegsoft.gritx.BuildConfig
 import com.solbegsoft.gritx.R
 import com.solbegsoft.gritx.di.signin.SignInComponent
 import com.solbegsoft.gritx.tools.extensions.onTextChanged
@@ -27,20 +28,18 @@ class SignInFragment: BaseFragment(R.layout.fragment_sign_in), ISignInView {
     }
 
     override fun initView() {
-        signInEmail.onTextChanged {
-            presenter.email = it
-        }
+        signInEmail.onTextChanged { presenter.email = it }
 
-        signInPassword.onTextChanged {
-            presenter.password = it
-        }
+        signInPassword.onTextChanged { presenter.password = it }
 
-        signInSubmit.setOnClickListener {
-            presenter.submit()
-        }
+        signInSubmit.setOnClickListener { presenter.submit() }
 
-        signInEmail.setText("dev.ios@well-advised.com")
-        signInPassword.setText("Shadelands123")
+        signInRegister.setOnClickListener { presenter.navigateToSignUp() }
+
+        if(BuildConfig.DEBUG) {
+            signInEmail.setText("dev.ios@well-advised.com")
+            signInPassword.setText("Shadelands123")
+        }
     }
 
     companion object {
