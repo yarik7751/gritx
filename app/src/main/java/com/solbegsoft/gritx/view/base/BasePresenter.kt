@@ -4,12 +4,6 @@ import androidx.annotation.CallSuper
 import com.solbegsoft.gritx.tools.android.IResourceProvider
 import com.solbegsoft.gritx.tools.rx.IRxSchedulersProvider
 import com.solbegsoft.gritx.tools.rx.RxTransformers
-import com.thegroovegr.groove.tools.android.IResourceProvider
-import com.thegroovegr.groove.tools.extension.getMessage
-import com.thegroovegr.groove.tools.rx.IRxSchedulersProvider
-import com.thegroovegr.groove.tools.rx.RxTransformers
-import com.thegroovegr.groove.view.base.model.InfoMessageViewModel
-import com.thegroovegr.groove.view.base.model.MessageType
 import io.reactivex.CompletableTransformer
 import io.reactivex.MaybeTransformer
 import io.reactivex.ObservableTransformer
@@ -19,7 +13,6 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.functions.Action
 import io.reactivex.functions.Consumer
 import ru.terrakok.cicerone.Router
-import timber.log.Timber
 import java.lang.ref.WeakReference
 
 abstract class BasePresenter<View : IBaseView>(

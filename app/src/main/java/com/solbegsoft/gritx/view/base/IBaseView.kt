@@ -8,7 +8,5 @@ interface IBaseView {
 
     //fun <E : InfoMessageViewModel> showInfoMessageViewModel(message: E)
 
-    fun openSignInScreen(onSignInCredentialed: (result: Boolean) -> Unit)
-
     fun showToast(message: String)
 }

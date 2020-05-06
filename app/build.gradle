@@ -20,6 +20,11 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -27,6 +32,18 @@ android {
         }
     }
 
+    flavorDimensions "target"
+
+    productFlavors {
+        dev {
+            dimension "target"
+            buildConfigField "String", "GRITX_BASE_URL", "\"https://verbalize.ai/api/v1/\""
+        }
+        prod {
+            dimension "target"
+            buildConfigField "String", "GRITX_BASE_URL", "\"https://verbalize.ai/api/v1/\""
+        }
+    }
 }
 
 dependencies {
